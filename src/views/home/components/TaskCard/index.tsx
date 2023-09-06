@@ -38,7 +38,7 @@ function TaskCard({ id, title, desc, createdAt, onDeleteTask }: TaskCardProps) {
       transition={{ type: "spring", stiffness: 600, damping: 30 }}
       className="relative"
     >
-      <div className="absolute h-full right-0 bg-red-400 w-full -z-40 rounded-xl flex justify-end p-3 pr-5">
+      <div className="absolute h-full right-0 bg-red-400 w-full -z-40 flex justify-end p-3 pr-5 rounded-[0.8rem]">
         <div className="flex gap-3 items-center">
           <span className="text-white text-sm">Delete</span>
           <div>
@@ -60,11 +60,7 @@ function TaskCard({ id, title, desc, createdAt, onDeleteTask }: TaskCardProps) {
             <span className="mr-1">🕥 </span>
             {title}
           </span>
-          <span
-            data-testid={`task-card-${id}-time`}
-            className="text-gray-500 "
-            // style={{ marginTop: "0.135rem" }}
-          >
+          <span data-testid={`task-card-${id}-time`} className="text-gray-500 ">
             {transformTime(createdAt)}
           </span>
         </div>
